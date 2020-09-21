@@ -1,0 +1,864 @@
+img
+    max-width: 100%
+body
+    font-family: 'Roboto', sans-serif
+    margin: 0
+    a
+        text-decoration: none
+        color: #000000
+.header
+    background: #ffffff
+    padding-top: 40px
+    padding-bottom: 20px
+    &__logo
+        // background: url('../img/header__logo.png')  center no-repeat
+        // background: url('../img/header-logo__two.png') center no-repeat
+        // background-size: cover
+        // width: 40px
+        // height: 40px 
+        img
+            padding-right: 30px
+    &-contacts
+        display: flex
+        justify-content: flex-end
+        align-items: center
+        padding-bottom: 22px
+        font-weight: bold
+        //padding-top: 22px
+        &__phone
+            padding-right: 40px
+            font-size: 13px
+            line-height: 17.16px
+            &::before
+                content: ''
+                display: inline-block
+                background: url(../img/header/phone-icon.png) center no-repeat
+                width: 29px
+                height: 29px
+                vertical-align: middle
+                margin-right: 12px
+        &__oclock
+            padding-right: 40px
+            font-size: 13px
+            line-height: 17.16px
+            &::before
+                content: ''
+                display: inline-block
+                background: url(../img/header/clock-icon.png) center no-repeat
+                width: 29px
+                height: 29px
+                vertical-align: middle
+                margin-right: 12px
+        &__email
+            padding-right: 40px
+            font-size: 13px
+            line-height: 17.16px
+            &::before
+                content: ''
+                display: inline-block
+                background: url(../img/header/email-icon.png) center no-repeat
+                width: 29px
+                height: 29px
+                vertical-align: middle
+                margin-right: 12px
+        &__geo
+            font-size: 13px
+            line-height: 17.16px
+            &::before
+                content: ''
+                display: inline-block
+                background: url(../img/header/geo-icon.png) center no-repeat
+                width: 29px
+                height: 29px
+                vertical-align: middle
+                margin-right: 12px
+    &-nav
+        display: flex
+        justify-content: flex-end
+        align-items: center
+        margin-bottom: 30px
+        &__menu
+            padding-right: 68px
+            font-weight: bold
+            font-size: 13px
+            line-height: 17px
+            letter-spacing: 0.1em
+            text-transform: uppercase
+            &__contacts
+                padding-right: 0
+                font-weight: bold
+    .menu
+        &-link
+            display: none
+            z-index: 9
+            //display: block
+            width: 50px
+            height: 50px 
+            background-color: #ffffff
+            border-radius: 50%
+            box-shadow: 1px 1px 10px rgba(0,0,0,.4)
+            position: fixed
+            top: 20px
+            left: 80%
+            span,span:before, span:after
+                display: block
+                height: 2px
+                width: 18px
+                position: absolute
+                left: 50%
+                margin-left: -9px
+                top: 50%
+                margin-top: -1px
+                background: #333333
+            span:before
+                transition: all 0.2s
+                content: ''
+                margin-top: -6px
+            span:after
+                transition: all 0.2s
+                content: ''
+                margin-top: 4px
+            &__active span
+                background-color: transparent
+                &::before
+                    transform: rotate(135deg)
+                    margin-top: 0
+                &::after
+                    transform: rotate(-135deg)
+                    margin-top: 0
+        opacity: 1
+        background: #005FA3
+        position: fixed
+        width: 100vw
+        height: 100vh
+        z-index: 2
+        display: flex
+        justify-content: center
+        align-items: center
+        transition: all 0.2s
+        left: -100vw
+        &__active
+            left: 0
+        ul
+            list-style: none
+            padding: 0
+            text-align: center
+            li
+                width: 100vw
+            a
+                display: block
+                width: 100%
+                line-height: 4
+                font-weight: 100
+                later-spacing: 4px
+                color: #ffffff
+                transition: all 0.2s
+                &:hover
+                    background-color: rgba(255,255 ,255 ,.4 )
+                    text-decoration: none
+.main
+    margin-top: 30px
+    padding-bottom: 30px
+    &-slider
+        img
+            position: relative
+            z-index: -1
+    &-block
+        position: absolute
+        overflow: hidden
+        z-index: 9999
+        top: 38%
+        left: 15%
+        &__text
+            font-size: 48px
+            line-height: 66px
+            color: #FFFFFF
+            margin-bottom: 80px
+        &__button
+            width: 270px
+            padding: 12px
+            background: #005FA3
+            color: #ffffff
+            font-size: 18px
+            line-height: 25px
+            border: none
+            outline: none
+            border-radius: 3px
+            &:hover
+                cursor: pointer
+                opacity: 0.9
+.slider-arrow
+    position: absolute
+    top: 80%
+    z-index: 1
+    height: 60px
+    width: 60px
+    &:hover
+        cursor: pointer
+    &_right
+        right: 10%
+        background:  #005FA3 url('../img/main/arrow-right.png') center no-repeat
+    &_left
+        left: 83%
+        background: #005FA3  url('../img/main/arrow-left.png') center no-repeat
+.slick-dots
+    position: absolute
+    top: 85%
+    left: -28%
+.slick-dots li
+    //background: #000000
+.slick-dots 
+    .li 
+        .button
+            color: #005FA3
+
+.services
+    background: #EBEBEB
+    padding-bottom: 100px
+    &-title
+        padding-top: 140px
+        font-weight: 900
+        margin-bottom: 40px
+        font-size: 24px
+        line-height: 33px
+        color: #BDBDBD
+    &-subtitle
+        font-weight: 900
+        font-size: 45px
+        line-height: 69px
+        margin-bottom: 102px
+    &-block
+        margin-bottom: 30px
+        &__img
+            position: relative
+        &__subtitle
+            position: absolute
+            top: 70%
+            left: 10%
+            font-size: 24px
+            line-height: 30px
+            color: #ffffff
+.about
+    padding-top: 140px
+    &-block
+        &__title
+            font-weight: 900
+            font-size: 24px
+            line-height: 33px
+            color: #BDBDBD
+            margin-bottom: 40px
+        &__subtitle
+            font-weight: 900
+            font-size: 48px
+            line-height: 69px
+            margin-bottom: 60px
+            span
+                color: #005fa3
+        &__descr
+            width: 445px
+            height: 245px
+            font-weight: 300
+            font-size: 18px
+            line-height: 25px
+    &-cases
+        background: #EBEBEB
+        padding: 40px 
+        margin-right: 30px
+        margin-bottom: 30px
+        &:hover 
+            background: #005FA3
+            color: #ffffff
+            a
+                color:#ffff 
+        &__title 
+            font-weight: 900
+            font-size: 55px
+            line-height: 66px
+            letter-spacing: 0.1em
+            text-transform: uppercase
+            padding-bottom: 30px
+        &__text
+            font-weight: bold
+            font-size: 14px
+            line-height: 18px
+            padding-bottom: 47px
+        &__link
+            font-size: 14px
+            line-height: 17px
+            text-decoration-line: underline
+            color: #005FA3
+.clients
+    background: #EBEBEB
+    padding-top: 100px
+    padding-bottom: 100px
+    &-mobile
+        &__block
+            display: none
+    &-title
+        font-weight: 900
+        font-size: 24px
+        line-height: 33px
+        color: #BDBDBD
+        margin-bottom: 15px 
+    &-subtitle
+        font-weight: 900
+        font-size: 48px
+        line-height: 69px
+        margin-bottom: 80px
+    &-slider
+    .slider-arrow
+        position: absolute
+        top: 100%
+        z-index: 1
+        height: 60px
+        width: 60px
+        &:hover
+            cursor: pointer
+        &_right
+            right: 3%
+            background: #005FA3 url('../img/main/arrow-right.png') center no-repeat
+            &:hover
+                cursor: pointer
+                opacity: 0.4
+        &_left
+            left: 86%
+            background: #005FA3 url('../img/main/arrow-left.png') center no-repeat
+            &:hover
+                cursor: pointer
+                opacity: 0.4
+        .slick-dots
+            position: absolute
+            top: 80%
+            left: -28%
+        .slick-dots li
+            //background: #000000
+        .slick-dots li button
+            color: #005FA3  
+.feedback
+    padding-top: 140px
+    padding-bottom: 140px
+    &-elements
+        display: none !important
+    &-title
+        font-weight: 900
+        font-size: 24px
+        line-height: 33px
+        color: #BDBDBD
+        margin-bottom: 40px
+    &-subtitle
+        font-weight: 900
+        font-size: 48px
+        line-height: 69px
+        margin-bottom: 80px
+    &-slider
+        background: #EBEBEB
+        padding: 45px 95px
+        &__text
+            width: 920px
+            height: 92px
+            font-weight: 300
+            font-size: 18px
+            line-height: 25px
+        &__people
+            display: flex
+            padding-top: 60px
+            &__img
+                width: 80px
+                height: 80px
+                margin-right: 30px  
+            &__descr
+                padding-top: 15px
+                &__name
+                    font-weight: 900
+                    font-size: 18px
+                    line-height: 25px
+                    margin-bottom: 10px
+                &__firm
+                    font-size: 14px
+                    line-height: 19px
+    .slider-arrow
+        position: absolute
+        top: 110%
+        z-index: 1
+        height: 60px
+        width: 60px
+        &:hover
+            cursor: pointer
+        &_right
+            right: 3%
+            background: #005FA3 url('../img/main/arrow-right.png') center no-repeat
+            &:hover
+                cursor: pointer
+                opacity: 0.4
+        &_left
+            left: 86%
+            background: #005FA3 url('../img/main/arrow-left.png') center no-repeat
+            &:hover
+                cursor: pointer
+                opacity: 0.4
+        .slick-dots
+            position: absolute
+            top: 80%
+            left: -28%
+        .slick-dots li
+            //background: #000000
+        .slick-dots li button
+            color: #005FA3  
+.connection
+    background: url('../img/connection/connection_bgjpg.jpg') 
+    color: #ffffff
+    padding-top: 120px
+    padding-bottom: 75px
+    &-title
+        font-weight: 900
+        font-size: 48px
+        line-height: 69px
+        padding-bottom: 30px
+    &-subtitle
+        font-weight: 300
+        font-size: 18px
+        line-height: 25px
+        padding-bottom: 80px
+    &-contacts
+        display: flex
+        &__phone
+            padding-right: 40px
+            font-weight: 300
+            font-size: 18px
+            line-height: 29px
+            &::before
+                content: ''
+                display: inline-block
+                background: url(../img/connection/phone.png) center no-repeat
+                width: 17px
+                height: 30px
+                vertical-align: middle
+                margin-right: 12px
+        &__email
+            font-weight: 300
+            font-size: 18px
+            line-height: 29px
+            &::before
+                content: ''
+                display: inline-block
+                background: url(../img/connection/email.png) center no-repeat
+                width: 40px
+                height: 29px
+                vertical-align: middle
+                margin-right: 12px
+.form
+    padding-top: 60px
+    &-block
+        display: inline-block
+        padding-right: 30px
+        &__title
+            font-size: 16px
+            line-height: 22px
+            padding-bottom: 15px
+        &__input
+            font-size: 18px
+            line-height: 29px
+            background: transparent 
+            border: none
+            border-bottom: 1px solid #fff
+            outline: none
+            color: #ffffff
+        &__message
+            padding-top: 35px
+            .mess 
+                background: transparent 
+                border: none
+                border-bottom: 1px solid #fff
+                outline: none
+                font-weight: 300
+                font-size: 21px
+                line-height: 29px
+                padding-bottom: 80px
+                width: 480px
+                color: #ffffff
+            &__title
+                font-size: 16px
+                line-height: 22px
+                padding-top: 15px       
+                padding-bottom: 15px
+        &__buttons
+            display: flex
+            justify-content: flex-end
+            padding-right: 60px
+            &__button
+                width: 270px
+                padding: 12px
+                background: #005FA3
+                color: #ffffff
+                font-size: 18px
+                line-height: 25px
+                margin-top: 50px
+                border: none
+                outline: none
+                border-radius: 3px
+                &:hover
+                    cursor: pointer
+                    opacity: 0.9
+.footer
+    background: #ffffff
+    padding-top: 50px
+    padding-bottom: 40px
+    &-lable
+        font-weight: 300
+        font-size: 14px
+        line-height: 19px
+        color: #000000
+        &__right
+            text-align: right
+@media(max-width: 576px)
+    .hidden-mobile 
+        display: none !important
+    .header
+        &__logo
+            //background: url('../img/header__logo.png') center no-repeat
+            // width: 100%
+            // height: 100%
+        .menu
+            &-link
+                display: block 
+    .main
+        text-align: center
+        //background: #005FA3
+        &-block
+            position: relative
+            z-index: 0
+            left: 0
+            &__text 
+                font-size: 31px    
+                color: #000000
+                text-align: center
+                margin-bottom: 30px
+    .services
+        &-title
+            padding-top: 40px
+        &-subtitle
+            font-size: 30px
+            line-height: 30px  
+    .about
+        padding-top: 50px
+        &-block
+            &__title
+                margin-bottom: 25px
+            &__subtitle
+                font-size: 45px
+                line-height: 60px
+                margin-bottom: 25px
+            &__descr
+                    text-align: justify
+                    width: 300px
+                    height: 356px
+                    margin-bottom: 25px
+    .clients
+        &-mobile
+            &__block
+                display: block
+    .feedback
+        padding-top: 50px
+        &-elements
+            display: block !important
+        &-title
+            margin-bottom: 20px
+        &-subtitle
+            font-size: 40px
+            line-height: 50px
+            margin-bottom: 30px
+        &-element 
+            margin-top: 23px
+            outline: none
+            border: none
+            text-align: center
+            &__img 
+                margin: auto
+            &__title 
+                margin-top: 18px
+                color: #202020
+                font-size: 18px
+                font-weight: 700
+            &__subtitle 
+                margin-top: 13px
+                color: #404040
+                font-size: 16px
+                font-weight: 300
+                line-height: 22px
+            &__discr 
+                max-width: 744px
+                margin: auto
+                margin-top: 22px
+                color: #5b5b5b
+                font-size: 16px
+                font-weight: 300
+                line-height: 22.14px
+            &__discr div 
+                padding-top: 20px
+    .connection
+        padding-top: 0px
+        padding-bottom: 20px
+        &-title
+            font-size: 38px
+            padding-bottom: 0
+        &-subtitle
+            padding-bottom: 50px
+        &-contacts
+            display: block
+            &__phone
+                padding-bottom: 15px    
+                &::before
+                   width: 40px
+                   padding-right: 10px
+    .form
+        &-block
+            margin-bottom: 20px
+            &__message
+                .mess
+                    width: 230px
+    .footer
+        &-lable
+            font-weight: 300
+            font-size: 14px
+            line-height: 19px
+            &__left
+                text-align: center
+                padding-bottom: 20px
+            &__right
+                text-align: center
+@media(max-width: 768px)
+    .header
+        &-contacts
+            display: none
+        &-nav
+            display: none
+        .menu
+            &-link
+                display: block 
+    .main
+        &-block
+            z-index: 1
+            &__text
+                font-size: 24px
+                line-height: 25px
+                margin-bottom: 20px
+            &__button
+                font-size: 13px
+                width: 150px
+                line-height: 10px
+    .slider-arrow
+        position: absolute
+        top: 84%
+        z-index: 1
+        height: 30px
+        width: 30px
+        &:hover
+            cursor: pointer
+        &_right
+            right: 10%
+            background:  #005FA3 url('../img/main/arrow-right.png') center no-repeat
+        &_left
+            left: 81%
+            background: #005FA3  url('../img/main/arrow-left.png') center no-repeat
+    .services
+        &-title
+            padding-top: 30px
+            margin-bottom: 0
+        &-subtitle
+            margin-bottom: 30px
+            top: 54%
+        &-block
+            &__subtitle
+                top: 54%
+    .about
+        padding-top: 30px
+        &-block
+            &__subtitle
+                margin-bottom: 30px
+    .clients
+        padding-top: 30px
+        &-title
+            margin-bottom: 0
+        &-subtitle
+            margin-bottom: 30px
+        .slider-arrow
+            position: absolute
+            top: 85
+            z-index: 99
+            height: 30px
+            width: 30px
+            &:hover
+                cursor: pointer
+            &_right
+                right: 10%
+                background:  #005FA3 url('../img/main/arrow-right.png') center no-repeat
+            &_left
+                left: 81%
+                background: #005FA3  url('../img/main/arrow-left.png') center no-repeat
+        .slick-dots
+            position: absolute
+            top: 100%
+            left: -28%
+        .slick-dots li
+            //background: #000000
+        .slick-dots li button
+            color: #005FA3 
+    .feedback
+        padding-top: 30px
+        &-title
+            margin-bottom: 0px 
+        &-subtitle
+            margin-bottom: 30px
+        .slider-arrow
+            position: absolute
+            top: 85
+            z-index: 99
+            height: 30px
+            width: 30px
+            &:hover
+                cursor: pointer
+            &_right
+                right: 10%
+                background:  #005FA3 url('../img/main/arrow-right.png') center no-repeat
+            &_left
+                left: 81%
+                background: #005FA3  url('../img/main/arrow-left.png') center no-repeat
+        .slick-dots
+            position: absolute
+            top: 110%
+            left: -28%
+    .connection
+        padding-top: 0
+        &-title 
+            padding-bottom: 0
+        &-subtitle
+            padding-bottom: 50px
+        &-contacts
+            display: block
+            &__phone
+                margin-bottom: 15px
+                &::before
+                    width: 35px
+    .form
+        &-block
+            margin-bottom: 20px
+            &__message
+                .mess
+                    width: 230px
+            &__buttons
+                display: block
+                &__button
+                    width: 230px
+@media(max-width: 992px)
+    .header
+        &-contacts
+            display: none
+        &-nav
+            display: none
+        .menu
+            &-link
+                display: block 
+    .main
+        &-block
+            top: 25%
+            z-index: 1
+            &__text
+                font-size: 24px
+                line-height: 25px
+                margin-bottom: 20px
+            &__button
+                font-size: 13px
+                width: 150px
+                line-height: 10px
+    .slider-arrow
+        position: absolute
+        top: 84%
+        z-index: 1
+        height: 30px
+        width: 30px
+        &:hover
+            cursor: pointer
+        &_right
+            right: 10%
+            background:  #005FA3 url('../img/main/arrow-right.png') center no-repeat
+        &_left
+            left: 81%
+            background: #005FA3  url('../img/main/arrow-left.png') center no-repeat
+@media(max-width: 1200px)
+    .header
+        &-contacts
+            &__phone
+                padding-right: 15px
+                font-size: 13px
+                line-height: 0px
+                &::before
+                    content: ''
+                    width: 25px
+                    height: 25px
+                    vertical-align: middle
+                    margin-right: 8px
+            &__oclock
+                padding-right: 15px
+                font-size: 13px
+                line-height: 0px
+                &::before
+                    content: ''
+                    width: 25px
+                    height: 25px
+                    vertical-align: middle
+                    margin-right: 8px
+            &__email
+                padding-right: 14px
+                font-size: 13px
+                line-height: 0px
+                &::before
+                    content: ''
+                    width: 25px
+                    height: 25px
+                    vertical-align: middle
+                    margin-right: 8px
+            &__geo
+                font-size: 13px
+                line-height: 0px
+                &::before
+                    content: ''
+                    width: 25px
+                    height: 25px
+                    vertical-align: middle
+                    margin-right: 8px
+        &-nav
+            margin-bottom: 0
+            &__menu
+                padding-right: 60px
+        // .menu
+        //     &-link
+        //         display: block 
+    .main
+        &-block
+            top: 25%
+            z-index: 1
+            &__text
+                font-size: 24px
+                line-height: 25px
+                margin-bottom: 20px
+            &__button
+                font-size: 13px
+                width: 150px
+                line-height: 10px
+    .slider-arrow
+        position: absolute
+        top: 84%
+        z-index: 1
+        height: 30px
+        width: 30px
+        &:hover
+            cursor: pointer
+        &_right
+            right: 10%
+            background:  #005FA3 url('../img/main/arrow-right.png') center no-repeat
+        &_left
+            left: 81%
+            background: #005FA3  url('../img/main/arrow-left.png') center no-repeat
+         
+
+                    
