@@ -719,6 +719,7 @@ body a {
   }
   .main {
     text-align: center;
+    padding-bottom: 30px;
   }
   .main-block {
     position: relative;
